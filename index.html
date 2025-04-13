@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Speranza Deejoe | Data Science Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+      color: #fff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #111;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav h1 a {
+      text-decoration: none;
+      color: #f1c40f;
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    nav .social-links a {
+      margin-left: 1rem;
+      color: #0ff;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+    }
+
+    .hero {
+      background: linear-gradient(to bottom right, #0f2027, #203a43);
+      text-align: center;
+      padding: 5rem 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      border: 2px solid #fff;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .section.blue {
+      background-color: #112d4e;
+    }
+
+    .section.teal {
+      background-color: #3f72af;
+    }
+
+    .section.purple {
+      background-color: #6c5ce7;
+    }
+
+    .section.dark {
+      background-color: #1a1a2e;
+    }
+
+    .skills-filter {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .skills-filter button {
+      margin: 0.3rem;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 4px;
+      background: #fff;
+      color: #333;
+      cursor: pointer;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+
+    .project-card {
+      background-color: #2d3436;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .project-card a {
+      color: #00cec9;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <h1><a href="#about">Speranza Deejoe</a></h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="social-links">
+      <a href="https://github.com/speranzadeejoe" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/speranza-deejoe-a6b467222/" target="_blank">LinkedIn</a>
+    </div>
+  </nav>
+
+  <!-- Hero / Intro -->
+  <header class="hero">
+    <h2>Hi, I'm</h2>
+    <h2>Speranza Deejoe</h2>
+    <p>Welcome to my portfolio. Explore my work and skills.</p>
+    <a href="#about" class="btn">About Me</a>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section blue">
+    <h2>About Me</h2>
+    <p>I'm Speranza Deejoe — a tech enthusiast with a strong grasp of Machine Learning, Deep Learning, and NLP, driven by a deep interest in Data Science and Data Analysis. I also specialize in Full Stack Web Development, building smart, scalable solutions that connect data with user experience.</p>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section teal">
+    <h2>Work Experience</h2>
+    <div class="experience-entry">
+      <h3>Zenanvibe</h3>
+      <p>Working as a Tech Advisor and Trainer(Dec 2024 - Present). </p>
+      <h3>CSIR-Central Leather Research Institute.</h3>
+      <p>Worked as a Research Intern for Supplychains(Sept 2024 - Dec 2024). </p>
+      <h3>Gavs Technologies</h3>
+      <p>Worked as a SQL Developer(Aug 2024 - Sept 2024). </p>   
+      <h3>Research Intern – NIT Trichy</h3>
+      <p>Developed a graph-based machine learning model for insider threat detection during my research internship at NIT Trichy(April 2024 - September 2024).</p>
+      <h3>Archimedes Digital</h3>
+      <p>Worked in the domain Generative AI.Created an interactive Chatbot(Dec 2023 - Jan 2024). </p>  
+    </div>
+    <!-- Add more entries -->
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section purple">
+    <h2>Projects</h2>
+    <div class="skills-filter">
+      <button onclick="filterProjects('all')">All</button>
+      <button onclick="filterProjects('webdev')">Web Development</button>
+      <button onclick="filterProjects('fullstack')">Full Stack</button>
+      <button onclick="filterProjects('python')">Python</button>
+      <button onclick="filterProjects('sql')">SQL</button>
+      <button onclick="filterProjects('powerbi')">Power BI</button>
+      <button onclick="filterProjects('tableau')">Tableau</button>
+      <button onclick="filterProjects('excel')">Excel</button>
+    </div>
+
+    <div class="project-grid">
+      <div class="project-card python">
+        <h3>calculator</h3>
+        <p>Used Python Tkinter to build a GUI.</p>
+        <a href="https://github.com/speranzadeejoe/calculator-using-python-" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card python">
+        <h3>Iris-Classification-Using-Decision-Tree-and-Random-Forest</h3>
+        <p>Used Python for Machine Learning.</p>
+        <a href="https://github.com/speranzadeejoe/Iris-Classification-Using-Decision-Tree-and-Random-Forest" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card python">
+        <h3>BBC-News-Text-Classification</h3>
+        <p>Used NLP and Machine Learning in python.</p>
+        <a href="https://github.com/speranzadeejoe/BBC-News-Text-Classification" target="_blank"> GitHub</a>
+      </div>
+      <div class="project-card python">
+        <h3>Covid-19-DATA-ANALYSIS-</h3>
+        <p>Used Python for Machine Learning.</p>
+        <a href="https://github.com/speranzadeejoe/Covid-19-DATA-ANALYSIS-" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card python">
+        <h3>Random-forest-model-for-50-startup-dataset-</h3>
+        <p>Used Python for Machine Learning.</p>
+        <a href="https://github.com/speranzadeejoe/Random-forest-model-for-50-startup-dataset-" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card python">
+        <h3>House-prediction-using-Neural-Networks-</h3>
+        <p>Used Python for Machine Learning.</p>
+        <a href="https://github.com/speranzadeejoe/House-prediction-using-Neural-Networks-"target="_blank">GitHub</a>
+      </div>
+      <div class="project-card python">
+        <h3>Proactive-Malware-Detection-In-Python-Using-Random-Forest-Model</h3>
+        <p>Used Python for Machine Learning.</p>
+        <a href="https://github.com/speranzadeejoe/Proactive-Malware-Detection-In-Python-Using-Random-Forest-Model" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card python">
+        <h3>Redwine-Quality-Multiclass-Classification-Model-</h3>
+        <p>Used Python for Machine Learning.</p>
+        <a href="https://github.com/speranzadeejoe/Redwine-Quality-Multiclass-Classification-Model-" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card python">
+        <h3>Titanic-Model-</h3>
+        <p>Used Python for Machine Learning.</p>
+        <a href="https://github.com/speranzadeejoe/Titanic-Model-" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card python">
+        <h3>Heart-disease-Prediction-model</h3>
+        <p>Used Python for Machine Learning.</p>
+        <a href="https://github.com/speranzadeejoe/Heart-disease-Prediction-model" target="_blank">GitHub</a>
+      </div>
+       <div class="project-card python">
+        <h3>Image-Classification-using-CNN</h3>
+        <p>Used Python for DeepLearning.</p>
+        <a href="https://github.com/speranzadeejoe/Image-Classification-using-CNN" target="_blank">GitHub</a>
+      </div>
+       <div class="project-card python">
+        <h3>Churn-analysis-using-machine-learning-</h3>
+        <p>Used Python for Machine Learning.</p>
+        <a href="https://github.com/speranzadeejoe/Churn-analysis-using-machine-learning-" target="_blank">GitHub</a>
+      </div>
+       <div class="project-card python">
+        <h3>Heart-disease-Prediction-model</h3>
+        <p>Used Python for Machine Learning.</p>
+        <a href="https://github.com/speranzadeejoe/Heart-disease-Prediction-model" target="_blank">GitHub</a>
+      </div>
+       <div class="project-card python">
+        <h3>Text-summarizer-using-Machine-Learning-</h3>
+        <p>Used Python for Machine Learning.</p>
+        <a href="https://github.com/speranzadeejoe/Text-summarizer-using-Machine-Learning-" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card python">
+        <h3>Student-Performance-Prediction-using-Regression-</h3>
+        <p>Used Python for Machine Learning.</p>
+        <a href="https://github.com/speranzadeejoe/Student-Performance-Prediction-using-Regression-" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card python">
+        <h3>Earthquake-Prediction-using-Machine-Learning-</h3>
+        <p>Used Python for Machine Learning.</p>
+        <a href="https://github.com/speranzadeejoe/Earthquake-Prediction-using-Machine-Learning-" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card python">
+        <h3>Credit-Card-Fraud-Detection-using-Machine-Learning</h3>
+        <p>Used Python for Machine Learning.</p>
+        <a href="https://github.com/speranzadeejoe/Credit-Card-Fraud-Detection-using-Machine-Learning" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card python">
+        <h3>Credit-Card-Customer-Churn-Analysis-using-Deep-Learning</h3>
+        <p>Used Python for DeepLearning.</p>
+        <a href="https://github.com/speranzadeejoe/Credit-Card-Customer-Churn-Analysis-using-Deep-Learning" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card python">
+        <h3>Handwritten-Digit-Classification-Using-ANN</h3>
+        <p>Used Python for Deeplearning.</p>
+        <a href="https://github.com/speranzadeejoe/Handwritten-Digit-Classification-Using-ANN" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card python">
+        <h3>Diabetes-prediction-using-Machine-learning-</h3>
+        <p>Used Python and fullstack with Machine Learning.</p>
+        <a href="https://diabetes-prediction-l69e.onrender.com/" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card fullstack">
+        <h3>Diabetes-prediction-using-Machine-learning-</h3>
+        <p>Used Python and fullstack with Machine Learning.</p>
+        <a href="https://diabetes-prediction-l69e.onrender.com/" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card fullstack">
+        <h3>Attendance-Management-System-</h3>
+        <p>Used Python and sql for full stack.</p>
+        <a href="https://diabetes-prediction-l69e.onrender.com/" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card full sql">
+        <h3>Attendance-Management-System-</h3>
+        <p>Used Python and sql for full stack.</p>
+        <a href="https://diabetes-prediction-l69e.onrender.com/" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card fullstack">
+        <h3>Billing-System-</h3>
+        <p>Used Python and sql for full stack.</p>
+        <a href="https://github.com/speranzadeejoe/Billing-System-" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card sql">
+        <h3>Billing-System-</h3>
+        <p>Used Python and sql for full stack.</p>
+        <a href="https://github.com/speranzadeejoe/Billing-System-" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card fullstack">
+        <h3>Task-Management-System</h3>
+        <p>Used Python and sql for full stack.</p>
+        <a href="https://github.com/speranzadeejoe/Task-Management-System" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card sql">
+        <h3>Task-Management-System</h3>
+        <p>Used Python and sql for full stack.</p>
+        <a href="https://github.com/speranzadeejoe/Task-Management-System" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card fullstack">
+        <h3>Restaurant-Management-System-using-Python-</h3>
+        <p>Used Python for full stack.</p>
+        <a href="https://github.com/speranzadeejoe/Restaurant-Management-System-using-Python-" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card python">
+        <h3>Restaurant-Management-System-using-Python-</h3>
+        <p>Used Python for full stack.</p>
+        <a href="https://github.com/speranzadeejoe/Restaurant-Management-System-using-Python-" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card webdev">
+        <h3>Portfolio</h3>
+        <p>Used HTML AND CSS FOR WEB DEVELOPMENT .</p>
+        <a href="https://speranzadeejoe.github.io/Portfolio/" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card webdev">
+        <h3>MiniNovaLearningHub</h3>
+        <p>Used HTML AND CSS FOR WEB DEVELOPMENT .</p>
+        <a href="https://github.com/speranzadeejoe/MiniNovaLearningHub" target="_blank">GitHub</a>
+      </div>
+      <div class="project-card powerbi">
+        <h3>Power-BI-Dashboard-for-student-data</h3>
+        <p>Used POWER BI to create a dashboard.</p>
+        <a href="https://github.com/speranzadeejoe/Power-BI-Dashboard-for-student-data" target="_blank">GitHub</a>
+      </div>
+      <!-- Add more project-card blocks for other skills -->
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section dark">
+    <h2>Contact Me</h2>
+    <p>Email: speranzadeejoemini@gmail.com</p>
+    <p>Phone: +91-8939382661</p>
+    <p>Location: Chennai, India</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/speranza-deejoe-a6b467222/">LinkedIn</a>
+      <a href="https://github.com/speranzadeejoe">GitHub</a>
+      <a href="https://www.instagram.com/speranzadeejoe/?locale=zh_CN">Instagram</a>
+    </div>
+  </section>
+
+  <script>
+    function filterProjects(category) {
+      const projects = document.querySelectorAll(".project-card");
+      projects.forEach(project => {
+        if (category === "all" || project.classList.contains(category)) {
+          project.style.display = "block";
+        } else {
+          project.style.display = "none";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
