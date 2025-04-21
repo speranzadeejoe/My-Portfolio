@@ -21,7 +21,7 @@ The website is designed to provide a comprehensive overview of Speranza Deejoe's
 
 ## Setup
 
-This is a static website built with HTML, CSS, and JavaScript. To view it:
+This is a static website built with HTML and CSS. To view it:
 
 1.  **Clone the repository (if applicable):** If the code is hosted on a platform like GitHub, you can clone the repository to your local machine using Git:
     ```bash
